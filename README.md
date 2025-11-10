@@ -9,6 +9,7 @@
 - [Installation](#installation)
 - [Datasets](#datasets)
 - [▶️ Run Training](#-run-training)
+- [Citation](#citation)
 - [References](#references)
 - [License](#license)
 
