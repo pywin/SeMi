@@ -4,10 +4,10 @@
 
 ---
 
-## Table of Contents
-- [Environment](#environment)
-- [Installation](#installation)
-- [Datasets](#datasets)
+## 📚 Table of Contents
+- [⚙️ Environment](#environment)
+- [🛠️ Installation](#installation)
+- [🗄️ Datasets](#datasets)
 - [▶️ Run Training](#-run-training)
 - [Citation](#citation)
 - [References](#references)
@@ -15,7 +15,7 @@
 
 ---
 
-## Environment
+## ⚙️ Environment
 Create and activate a clean conda environment (recommended):
 
 ```bash
@@ -31,7 +31,7 @@ python -m pip install -U pip wheel setuptools
 
 ---
 
-## Installation
+## 🛠️ Installation
 Install PyTorch (choose CUDA version as appropriate):
 
 ```bash
@@ -48,7 +48,7 @@ pip install -r requirements.txt
 
 ---
 
-## Datasets
+## 🗄️ Datasets
 Prepare dataset folders (examples below). You can store them anywhere and pass paths via configs or CLI.
 
 ```bash
@@ -66,7 +66,7 @@ Update dataset paths in `configs/data/*.yaml` or via CLI (see below).
 
 ---
 
-## ▶️ Run Training
+## 🚀 Run Training
 Use the provided **`start.sh`** as a single entry point. Make it executable first:
 
 ```bash
