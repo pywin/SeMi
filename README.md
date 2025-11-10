@@ -8,7 +8,7 @@
 - [⚙️ Environment](#environment)
 - [🛠️ Installation](#installation)
 - [🗄️ Datasets](#datasets)
-- [▶️ Run Training](#-run-training)
+- [🚀 Run Training](#-run-training)
 - [Citation](#citation)
 - [References](#references)
 - [License](#license)
@@ -64,7 +64,7 @@ mkdir -p ${DATA_ROOT}
 ---
 
 ## 🚀 Run Training
-We provide runnable scripts to execute SeMi training under different dataset and imbalance configurations.
+Please copy the example commands below into your own script (e.g., `run_cifar10.sh` or `run_cifar100.sh`) according to the dataset and configuration you wish to train.
 
 ### CIFAR-10-LT
 Run:
