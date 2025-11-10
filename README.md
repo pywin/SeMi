@@ -5,19 +5,12 @@
 ---
 
 ## Table of Contents
-- [Overview](#overview)
 - [Environment](#environment)
 - [Installation](#installation)
 - [Datasets](#datasets)
-- [Configuration](#configuration)
 - [▶️ Run Training](#-run-training)
-- [Evaluation](#evaluation)
-- [Reproduce Paper Results](#reproduce-paper-results)
-- [Project Structure](#project-structure)
-- [FAQ](#faq)
-- [Citation](#citation)
+- [References](#references)
 - [License](#license)
-- [Contact](#contact)
 
 ---
 
@@ -83,32 +76,17 @@ bash
 
 **1) CIFAR10-LT (N=1500 M=3000 r=100):**
 ```bash
-CUDA_VISIBLE_DEVICES=6 python train_cifar_fix_semi.py --ratio 2 --num_max 1500 --imb_ratio_l 100 --imb_ratio_u 100 --epoch 500 --val-iteration 500 --out ./results/cifar10/semi/N1500_r100/seed1_test --manualSeed 1 --decay_step 100 --warmup_step 2 --ws strong --alpha 0.4 --scale 0.75 --tau 0.7 --proto_t 0.09 --conswt 0.15 --num_samples 128 --use_pc 1 --df 0.99 --use_lcu 0 --use_lc 1 --use_mo 0
+CUDA_VISIBLE_DEVICES=6 python train_semi.py --ratio 2 --num_max 1500 --imb_ratio_l 100 --imb_ratio_u 100 --epoch 500 --val-iteration 500 --out ./results/cifar10/semi/N1500_r100/seed1_test --manualSeed 1 --decay_step 100 --warmup_step 2 --ws strong --alpha 0.4 --scale 0.75 --tau 0.7 --proto_t 0.09 --conswt 0.15 --num_samples 128 --use_pc 1 --df 0.99 --use_lcu 0 --use_lc 1 --use_mo 0
 ```
 
 **2) CIFAR10-LT (N=500 M=4000 r=100):**
 ```bash
-#CUDA_VISIBLE_DEVICES=1 python train_cifar_fix_semi.py --ratio 8 --num_max 500 --imb_ratio_l 100 --imb_ratio_u 100 --epoch 500 --val-iteration 500 --out ./results/cifar10/semi/N500_r100/seed1 --manualSeed 1 --decay_step 100 --warmup_step 20 --ws strong --alpha 0.4 --scale 0.75 --tau 0.7 --proto_t 0.09 --conswt 0.15 --num_samples 128 --use_pc 1 --df 0.99 --use_lcu 0 --use_lc 1 --use_mo 0
+#CUDA_VISIBLE_DEVICES=1 python train_semi.py --ratio 8 --num_max 500 --imb_ratio_l 100 --imb_ratio_u 100 --epoch 500 --val-iteration 500 --out ./results/cifar10/semi/N500_r100/seed1 --manualSeed 1 --decay_step 100 --warmup_step 20 --ws strong --alpha 0.4 --scale 0.75 --tau 0.7 --proto_t 0.09 --conswt 0.15 --num_samples 128 --use_pc 1 --df 0.99 --use_lcu 0 --use_lc 1 --use_mo 0
 ```
 
 **3) CIFAR10-LT (N=150 M=300 r=10):**
 ```bash
-CUDA_VISIBLE_DEVICES=0 python train_cifar_fix_semi.py --dataset cifar100 --ratio 2 --num_max 150 --imb_ratio_l 10 --imb_ratio_u 10 --epoch 500 --val-iteration 500 --out ./results/cifar100/semi/N150_r10/seed1 --manualSeed 1 --decay_step 200 --warmup_step 20 --ws strong --alpha 0.4 --scale 0.75 --tau 0.7 --proto_t 0.09 --conswt 0.15 --num_samples 512 --use_pc 1 --df 0.99 --use_lcu 0 --use_lc 1 --use_mo 0
-```
-
-
-
----
-
-## Evaluation
-Run evaluation only (skip training) by toggling a flag or a dedicated config:
-
-```bash
-bash start.sh \
-  mode=eval \
-  eval.checkpoint=/path/to/checkpoint.pt \
-  dataset=cifar10-lt \
-  data.root=./data
+CUDA_VISIBLE_DEVICES=0 python train_semi.py --dataset cifar100 --ratio 2 --num_max 150 --imb_ratio_l 10 --imb_ratio_u 10 --epoch 500 --val-iteration 500 --out ./results/cifar100/semi/N150_r10/seed1 --manualSeed 1 --decay_step 200 --warmup_step 20 --ws strong --alpha 0.4 --scale 0.75 --tau 0.7 --proto_t 0.09 --conswt 0.15 --num_samples 512 --use_pc 1 --df 0.99 --use_lcu 0 --use_lc 1 --use_mo 0
 ```
 
 ---
@@ -124,6 +102,13 @@ If you find **SeMi** helpful, please consider citing:
   year={2025}
 }
 ```
+
+---
+
+## References
+https://github.com/YUE-FAN/CoSSL
+https://github.com/google-research/fixmatch
+https://github.com/ytaek-oh/daso
 
 ---
 
