@@ -113,7 +113,9 @@ If you find **SeMi** helpful, please consider citing:
 
 ## References
 https://github.com/YUE-FAN/CoSSL
+
 https://github.com/google-research/fixmatch
+
 https://github.com/ytaek-oh/daso
 
 ---
