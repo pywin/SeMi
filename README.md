@@ -90,7 +90,7 @@ CUDA_VISIBLE_DEVICES=6 python train_semi.py --ratio 2 --num_max 1500 --imb_ratio
 #CUDA_VISIBLE_DEVICES=1 python train_semi.py --ratio 8 --num_max 500 --imb_ratio_l 100 --imb_ratio_u 100 --epoch 500 --val-iteration 500 --out ./results/cifar10/semi/N500_r100/seed1 --manualSeed 1 --decay_step 100 --warmup_step 20 --ws strong --alpha 0.4 --scale 0.75 --tau 0.7 --proto_t 0.09 --conswt 0.15 --num_samples 128 --use_pc 1 --df 0.99 --use_lcu 0 --use_lc 1 --use_mo 0
 ```
 
-**3) CIFAR10-LT (N=150 M=300 r=10):**
+**3) CIFAR100-LT (N=150 M=300 r=10):**
 ```bash
 CUDA_VISIBLE_DEVICES=0 python train_semi.py --dataset cifar100 --ratio 2 --num_max 150 --imb_ratio_l 10 --imb_ratio_u 10 --epoch 500 --val-iteration 500 --out ./results/cifar100/semi/N150_r10/seed1 --manualSeed 1 --decay_step 200 --warmup_step 20 --ws strong --alpha 0.4 --scale 0.75 --tau 0.7 --proto_t 0.09 --conswt 0.15 --num_samples 512 --use_pc 1 --df 0.99 --use_lcu 0 --use_lc 1 --use_mo 0
 ```
